@@ -1,5 +1,54 @@
 # Changelog
 
+## [1.1.0](https://github.com/ublue-os/bazzite/compare/v1.0.1...v1.1.0) (2023-08-29)
+
+
+### Features
+
+* **deck:** Add calibrated color profiles for matte & reflective Steam Deck displays. ([3e38000](https://github.com/ublue-os/bazzite/commit/3e38000b112ed726f6c49ef747342abe97097cc8))
+* **deck:** Add equalizer settings for mic from SteamOS ([6bd7248](https://github.com/ublue-os/bazzite/commit/6bd7248797f91f54b73afc88d966618b5dc1be87))
+* **deck:** Add loopback audio source ([b78e0d2](https://github.com/ublue-os/bazzite/commit/b78e0d26b8e6858f425d2a0010fd9e09a68d6492))
+* **deck:** Switch bios updates to being default disabled, these will be enabled by Yafti at launch instead so they may be opted out of. ([3fd3ee5](https://github.com/ublue-os/bazzite/commit/3fd3ee510af083395c2e3c4419d283cdc499a299))
+* **deck:** Use librnnoise params from SteamOS ([c4fb899](https://github.com/ublue-os/bazzite/commit/c4fb899497c051185388465569997f1b2da3c1dd))
+* **gnome:** Add totem video player flatpak ([d4c3478](https://github.com/ublue-os/bazzite/commit/d4c347847b8a98a609e7e6460817537c773caa75))
+* **gnome:** Enable symlink creation context menus and show folders first by default ([30b377b](https://github.com/ublue-os/bazzite/commit/30b377b107ea6c077ff87a43492c3a6f25a64a39))
+* **gnome:** Use ProtonPlus over Protonup-Qt on GNOME builds. Same feature set, more consistent UI. ([138e479](https://github.com/ublue-os/bazzite/commit/138e47986fe46daef70ed560f7b35b754a33c8ad))
+* **just:** Add script that signs the current image ([e6b8cd9](https://github.com/ublue-os/bazzite/commit/e6b8cd999e6004a1799da9a0b21e492b23b1b3ac))
+* **just:** Use image identifiers for signing ([5823866](https://github.com/ublue-os/bazzite/commit/58238666ba4b95b6f92ebd09f909c3c8cd3febba))
+* reduce boot times by creating donefiles w scripts in desktop version ([d6667e8](https://github.com/ublue-os/bazzite/commit/d6667e85bf99348b67c1960ea3c30eab4775f31b))
+* Use determinate systems nix installer ([8d7f2ef](https://github.com/ublue-os/bazzite/commit/8d7f2efe93e97e508d72c5f67061a1562974054c)), closes [#209](https://github.com/ublue-os/bazzite/issues/209)
+* **yafti:** Sign Bazzite during installation ([3729cf6](https://github.com/ublue-os/bazzite/commit/3729cf63725fd469523413b3019edef2b651d04f))
+
+
+### Bug Fixes
+
+* Add workaround for hardcoded font path in Steam (Thanks szescxz) ([7dd9580](https://github.com/ublue-os/bazzite/commit/7dd9580f709369844d80d67485f256808264187a))
+* **build:** Remove PR tagged images ([c679417](https://github.com/ublue-os/bazzite/commit/c6794174dfbe9e6fa20592fbb806b3e57dd9c885))
+* check donefiles in system services + do not check flatpak donefile ([9452a41](https://github.com/ublue-os/bazzite/commit/9452a41b313f3dee01852be8d6211f7ee8c019e5))
+* **deck:** Add needed packages for Chinese input (Thanks szescxz) ([efe06f2](https://github.com/ublue-os/bazzite/commit/efe06f2ba1c323c34db08de843126392c64167c2))
+* **deck:** Correct ibus path in steamdeck-kde-presets ([b028b53](https://github.com/ublue-os/bazzite/commit/b028b53a256453ec1c3b040dcb9deea7b90773f4)), closes [#210](https://github.com/ublue-os/bazzite/issues/210)
+* **deck:** Launch Steam with -steamdeck to prevent Steam re-install when switching to gamemode, and (potentially) allow beta client selection. ([471c7bc](https://github.com/ublue-os/bazzite/commit/471c7bc6842c308cd02fca1e2eea4d499f21452a))
+* **deck:** Only launch steam with -steamdeck if it's been run & updated at least once. ([df9b89f](https://github.com/ublue-os/bazzite/commit/df9b89f6b73ab289909c7aa43b5564e740cbfb38)), closes [#214](https://github.com/ublue-os/bazzite/issues/214)
+* **deck:** Reduce max volume now that firmware is working ([7f28345](https://github.com/ublue-os/bazzite/commit/7f28345432c417c773495e48c51532c01cf4e55c))
+* **deck:** Remove now unneeded environment variable ([9addffb](https://github.com/ublue-os/bazzite/commit/9addffb10c376cbe7466e7d4085835d81a5b4a32))
+* **deck:** Switch back to X11 by default while issues with special characters via Steam Keyboard are resolved ([bfd0cd0](https://github.com/ublue-os/bazzite/commit/bfd0cd00df5f60c4cd40a732d074b12e8fb5e429))
+* **deck:** Use volumes from SteamOS ([3265a68](https://github.com/ublue-os/bazzite/commit/3265a68635851b55a10ff0c6bead769643d1457b))
+* **desktop:** Only use X11 by default on deck builds ([e04b73c](https://github.com/ublue-os/bazzite/commit/e04b73cda669a7390fd5f998c38c8d232e34a1f9))
+* **desktop:** Restore autostart, fix big picture mode just/yafti command ([698213d](https://github.com/ublue-os/bazzite/commit/698213d058214df4ca637b8ccc34006f2129e03a)), closes [#183](https://github.com/ublue-os/bazzite/issues/183)
+* Fix configure_waydroid just script ([2bdf03c](https://github.com/ublue-os/bazzite/commit/2bdf03c7e1b13d3d4ab97d3c678982daa039b198))
+* **gnome:** Override new mutter-common package ([88c6bbc](https://github.com/ublue-os/bazzite/commit/88c6bbcb97d12bea0717db2a3e0322151634a477))
+* **gnome:** Remove appindicator extension that breaks VRR (Also updates Search Light defaults and fixes Bazzite-Menu so it launches Steam with extest applied) ([ea7d053](https://github.com/ublue-os/bazzite/commit/ea7d053d61586b8ec459c013ed46640575dea086))
+* **gnome:** Remove gnome extensions rpm, this is replaced with mjakeman's flatpak ([8cf5283](https://github.com/ublue-os/bazzite/commit/8cf5283b55daadb8c760316bfddaee2f94d0044f))
+* **gnome:** Remove non-working caffeine extension ([fe5a66f](https://github.com/ublue-os/bazzite/commit/fe5a66f6a6f5ae388eab58057394e519822e1f16))
+* **gnome:** Remove unneeded GNOME Extensions flatpak ([f64d9d2](https://github.com/ublue-os/bazzite/commit/f64d9d2846cda4fc96e2bdcd011616dbaa272da5))
+* **gnome:** Remove unneeded GNOME Extensions flatpak even if preinstalled ([838e553](https://github.com/ublue-os/bazzite/commit/838e553743aac49b0be9cada622b867e1cbda815))
+* **gnome:** Restore yelp (help) ([efe06f2](https://github.com/ublue-os/bazzite/commit/efe06f2ba1c323c34db08de843126392c64167c2))
+* make sure flatpak install script does not run if already installed ([97fab17](https://github.com/ublue-os/bazzite/commit/97fab178c6f214804f2b8b5e044e03ac2416feb0))
+* **steamos-update:** Don't trigger updates while checking (thanks Chimera!) ([c137d1b](https://github.com/ublue-os/bazzite/commit/c137d1b7e3a47ed553f26c1b356620f65f30aafb))
+* **steamtinkerlauncher:** Add xrandr dependency ([22689fd](https://github.com/ublue-os/bazzite/commit/22689fd80cf5ec8aa88a428dee33383322cfceda))
+* **user-setup:** Ensure user always has working justfile ([d39adf7](https://github.com/ublue-os/bazzite/commit/d39adf72dfcc91dbe94dd693302dc07fac822624))
+* **yafti:** Don't sign image if its already been signed ([2916d9a](https://github.com/ublue-os/bazzite/commit/2916d9a7999b8a81a88dc401066c7b4a230fb64f))
+
 ## [1.0.1](https://github.com/ublue-os/bazzite/compare/v1.0.0...v1.0.1) (2023-08-22)
 
 
